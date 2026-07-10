@@ -6,10 +6,12 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0004-median-of-two-sorted-arrays](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/0004-median-of-two-sorted-arrays) |
 | [0026-remove-duplicates-from-sorted-array](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/0026-remove-duplicates-from-sorted-array) |
+| [3534-path-existence-queries-in-a-graph-ii](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/3534-path-existence-queries-in-a-graph-ii) |
 ## Binary Search
 |  |
 | ------- |
 | [0004-median-of-two-sorted-arrays](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/0004-median-of-two-sorted-arrays) |
+| [3534-path-existence-queries-in-a-graph-ii](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/3534-path-existence-queries-in-a-graph-ii) |
 ## Divide and Conquer
 |  |
 | ------- |
@@ -23,6 +25,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0026-remove-duplicates-from-sorted-array](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/0026-remove-duplicates-from-sorted-array) |
+| [3534-path-existence-queries-in-a-graph-ii](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/3534-path-existence-queries-in-a-graph-ii) |
 ## String
 |  |
 | ------- |
@@ -31,4 +34,24 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [3756-concatenate-non-zero-digits-and-multiply-by-sum-ii](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/3756-concatenate-non-zero-digits-and-multiply-by-sum-ii) |
+## Dynamic Programming
+|  |
+| ------- |
+| [3534-path-existence-queries-in-a-graph-ii](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/3534-path-existence-queries-in-a-graph-ii) |
+## Greedy
+|  |
+| ------- |
+| [3534-path-existence-queries-in-a-graph-ii](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/3534-path-existence-queries-in-a-graph-ii) |
+## Bit Manipulation
+|  |
+| ------- |
+| [3534-path-existence-queries-in-a-graph-ii](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/3534-path-existence-queries-in-a-graph-ii) |
+## Graph Theory
+|  |
+| ------- |
+| [3534-path-existence-queries-in-a-graph-ii](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/3534-path-existence-queries-in-a-graph-ii) |
+## Sorting
+|  |
+| ------- |
+| [3534-path-existence-queries-in-a-graph-ii](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/3534-path-existence-queries-in-a-graph-ii) |
 <!---LeetCode Topics End-->
