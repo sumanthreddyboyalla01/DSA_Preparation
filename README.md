@@ -8,6 +8,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0026-remove-duplicates-from-sorted-array](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/0026-remove-duplicates-from-sorted-array) |
 | [1331-rank-transform-of-an-array](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/1331-rank-transform-of-an-array) |
 | [1480-running-sum-of-1d-array](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/1480-running-sum-of-1d-array) |
+| [1920-build-array-from-permutation](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/1920-build-array-from-permutation) |
 | [1929-concatenation-of-array](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/1929-concatenation-of-array) |
 | [3336-find-the-number-of-subsequences-with-equal-gcd](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/3336-find-the-number-of-subsequences-with-equal-gcd) |
 | [3534-path-existence-queries-in-a-graph-ii](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/3534-path-existence-queries-in-a-graph-ii) |
@@ -90,5 +91,6 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Simulation
 |  |
 | ------- |
+| [1920-build-array-from-permutation](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/1920-build-array-from-permutation) |
 | [1929-concatenation-of-array](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/1929-concatenation-of-array) |
 <!---LeetCode Topics End-->
