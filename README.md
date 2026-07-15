@@ -6,6 +6,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0004-median-of-two-sorted-arrays](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/0004-median-of-two-sorted-arrays) |
 | [0026-remove-duplicates-from-sorted-array](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/0026-remove-duplicates-from-sorted-array) |
+| [0027-remove-element](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/0027-remove-element) |
 | [1331-rank-transform-of-an-array](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/1331-rank-transform-of-an-array) |
 | [1480-running-sum-of-1d-array](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/1480-running-sum-of-1d-array) |
 | [1920-build-array-from-permutation](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/1920-build-array-from-permutation) |
@@ -32,6 +33,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0026-remove-duplicates-from-sorted-array](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/0026-remove-duplicates-from-sorted-array) |
+| [0027-remove-element](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/0027-remove-element) |
 | [3534-path-existence-queries-in-a-graph-ii](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/3534-path-existence-queries-in-a-graph-ii) |
 ## String
 |  |
