@@ -12,6 +12,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1480-running-sum-of-1d-array](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/1480-running-sum-of-1d-array) |
 | [1920-build-array-from-permutation](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/1920-build-array-from-permutation) |
 | [1929-concatenation-of-array](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/1929-concatenation-of-array) |
+| [3312-sorted-gcd-pair-queries](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/3312-sorted-gcd-pair-queries) |
 | [3336-find-the-number-of-subsequences-with-equal-gcd](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/3336-find-the-number-of-subsequences-with-equal-gcd) |
 | [3534-path-existence-queries-in-a-graph-ii](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/3534-path-existence-queries-in-a-graph-ii) |
 | [3867-sum-of-gcd-of-formed-pairs](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/3867-sum-of-gcd-of-formed-pairs) |
@@ -19,6 +20,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0004-median-of-two-sorted-arrays](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/0004-median-of-two-sorted-arrays) |
+| [3312-sorted-gcd-pair-queries](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/3312-sorted-gcd-pair-queries) |
 | [3534-path-existence-queries-in-a-graph-ii](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/3534-path-existence-queries-in-a-graph-ii) |
 ## Divide and Conquer
 |  |
@@ -27,6 +29,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Math
 |  |
 | ------- |
+| [3312-sorted-gcd-pair-queries](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/3312-sorted-gcd-pair-queries) |
 | [3336-find-the-number-of-subsequences-with-equal-gcd](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/3336-find-the-number-of-subsequences-with-equal-gcd) |
 | [3658-gcd-of-odd-and-even-sums](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/3658-gcd-of-odd-and-even-sums) |
 | [3754-concatenate-non-zero-digits-and-multiply-by-sum-i](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/3754-concatenate-non-zero-digits-and-multiply-by-sum-i) |
@@ -50,6 +53,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [1480-running-sum-of-1d-array](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/1480-running-sum-of-1d-array) |
+| [3312-sorted-gcd-pair-queries](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/3312-sorted-gcd-pair-queries) |
 | [3756-concatenate-non-zero-digits-and-multiply-by-sum-ii](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/3756-concatenate-non-zero-digits-and-multiply-by-sum-ii) |
 ## Dynamic Programming
 |  |
@@ -91,6 +95,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [1331-rank-transform-of-an-array](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/1331-rank-transform-of-an-array) |
+| [3312-sorted-gcd-pair-queries](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/3312-sorted-gcd-pair-queries) |
 ## Enumeration
 |  |
 | ------- |
@@ -98,6 +103,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Number Theory
 |  |
 | ------- |
+| [3312-sorted-gcd-pair-queries](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/3312-sorted-gcd-pair-queries) |
 | [3336-find-the-number-of-subsequences-with-equal-gcd](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/3336-find-the-number-of-subsequences-with-equal-gcd) |
 | [3658-gcd-of-odd-and-even-sums](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/3658-gcd-of-odd-and-even-sums) |
 | [3867-sum-of-gcd-of-formed-pairs](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/3867-sum-of-gcd-of-formed-pairs) |
@@ -111,4 +117,12 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0028-find-the-index-of-the-first-occurrence-in-a-string](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/0028-find-the-index-of-the-first-occurrence-in-a-string) |
+## Combinatorics
+|  |
+| ------- |
+| [3312-sorted-gcd-pair-queries](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/3312-sorted-gcd-pair-queries) |
+## Counting
+|  |
+| ------- |
+| [3312-sorted-gcd-pair-queries](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/3312-sorted-gcd-pair-queries) |
 <!---LeetCode Topics End-->
