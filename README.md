@@ -8,6 +8,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0026-remove-duplicates-from-sorted-array](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/0026-remove-duplicates-from-sorted-array) |
 | [0027-remove-element](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/0027-remove-element) |
 | [0283-move-zeroes](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/0283-move-zeroes) |
+| [1260-shift-2d-grid](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/1260-shift-2d-grid) |
 | [1331-rank-transform-of-an-array](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/1331-rank-transform-of-an-array) |
 | [1480-running-sum-of-1d-array](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/1480-running-sum-of-1d-array) |
 | [1920-build-array-from-permutation](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/1920-build-array-from-permutation) |
@@ -115,6 +116,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Simulation
 |  |
 | ------- |
+| [1260-shift-2d-grid](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/1260-shift-2d-grid) |
 | [1920-build-array-from-permutation](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/1920-build-array-from-permutation) |
 | [1929-concatenation-of-array](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/1929-concatenation-of-array) |
 | [3867-sum-of-gcd-of-formed-pairs](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/3867-sum-of-gcd-of-formed-pairs) |
@@ -138,4 +140,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [1081-smallest-subsequence-of-distinct-characters](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/1081-smallest-subsequence-of-distinct-characters) |
+## Matrix
+|  |
+| ------- |
+| [1260-shift-2d-grid](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/1260-shift-2d-grid) |
 <!---LeetCode Topics End-->
