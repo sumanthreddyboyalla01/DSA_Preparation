@@ -1,0 +1,79 @@
+# 486. Predict the Winner
+
+## 📝 Problem Statement
+Two players play a game on an integer array. On each turn, a player picks either the leftmost or rightmost number and adds it to their score. Both players play optimally.
+
+Determine whether **Player 1** can win (or tie, which also counts as a win).
+
+**LeetCode:** https://leetcode.com/problems/predict-the-winner/
+
+---
+
+## 💡 Approach
+Instead of tracking the scores of both players separately, we track the **maximum score difference** the current player can achieve over the opponent.
+
+Let:
+
+- `dp[i][j]` = maximum score difference the current player can obtain from the subarray `nums[i...j]`.
+
+Transition:
+
+- Pick the left element:
+  `nums[i] - dp[i+1][j]`
+- Pick the right element:
+  `nums[j] - dp[i][j-1]`
+
+Choose the better option:
+
+```text
+dp[i][j] = max(
+    nums[i] - dp[i+1][j],
+    nums[j] - dp[i][j-1]
+)
+```
+
+If the final score difference is **non-negative**, Player 1 can win or tie.
+
+---
+
+## ✅ Optimized Solution (O(n) Space)
+
+```python
+from typing import List
+
+class Solution:
+    def predictTheWinner(self, nums: List[int]) -> bool:
+        n = len(nums)
+        dp = nums[:]
+
+        for i in range(n - 2, -1, -1):
+            for j in range(i + 1, n):
+                dp[j] = max(nums[i] - dp[j], nums[j] - dp[j - 1])
+
+        return dp[-1] >= 0
+```
+
+---
+
+## ⏱️ Complexity Analysis
+
+- **Time Complexity:** `O(n²)`
+- **Space Complexity:** `O(n)`
+
+---
+
+## 🔑 Key Insight
+
+- The game is a **Minimax Dynamic Programming** problem.
+- Instead of storing absolute scores, store the **score difference** between the current player and the opponent.
+- If the difference is **≥ 0**, Player 1 can guarantee at least a tie, which counts as a win.
+
+---
+
+## 🏷️ Tags
+
+- Dynamic Programming
+- Game Theory
+- Minimax
+- Array
+- Interval DP
