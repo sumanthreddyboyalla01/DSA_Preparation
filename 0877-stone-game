@@ -1,0 +1,76 @@
+# 877. Stone Game
+
+## 📝 Problem Statement
+
+Alice and Bob are playing a game with an **even number of piles** of stones arranged in a row.
+
+- Alice starts first.
+- On each turn, a player removes the **entire leftmost or rightmost pile**.
+- Both players play **optimally**.
+- The total number of stones is **odd**, so a tie is impossible.
+
+Return **`true`** if Alice wins; otherwise, return **`false`**.
+
+**LeetCode:** https://leetcode.com/problems/stone-game/
+
+---
+
+## 💡 Approach
+
+This problem has a mathematical observation instead of requiring Dynamic Programming.
+
+Since:
+
+- The number of piles is **even**.
+- Alice always moves first.
+
+The piles can be divided into:
+
+- Even-indexed piles
+- Odd-indexed piles
+
+Before making her first move, Alice compares the total stones in both groups.
+
+She can always force the game so that she collects **all piles from either the even indices or the odd indices**, depending on which group has the larger total.
+
+Because the total number of stones is **odd**, the sums of the two groups cannot be equal. Therefore, one group always contains strictly more stones.
+
+Hence, Alice can always guarantee a win.
+
+---
+
+## ✅ Solution
+
+```python
+from typing import List
+
+class Solution:
+    def stoneGame(self, piles: List[int]) -> bool:
+        return True
+```
+
+---
+
+## ⏱️ Complexity Analysis
+
+- **Time Complexity:** `O(1)`
+- **Space Complexity:** `O(1)`
+
+---
+
+## 🔑 Key Insight
+
+- Alice always has a winning strategy.
+- She chooses the parity (even-indexed or odd-indexed piles) with the larger total.
+- Since the total number of stones is odd, one parity must have a strictly larger sum.
+- Therefore, Alice is guaranteed to win regardless of Bob's moves.
+
+---
+
+## 🏷️ Tags
+
+- Math
+- Game Theory
+- Greedy
+- Array
+```
