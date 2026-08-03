@@ -1,0 +1,105 @@
+# 1406. Stone Game III
+
+## 📝 Problem Statement
+
+Alice and Bob play a game with a row of stones.
+
+- Alice starts first.
+- On each turn, a player can take **1, 2, or 3** stones from the beginning of the remaining row.
+- Each stone has a value (can be negative).
+- Both players play optimally.
+
+Return:
+- `"Alice"` if Alice wins.
+- `"Bob"` if Bob wins.
+- `"Tie"` if both have the same score.
+
+**LeetCode:** https://leetcode.com/problems/stone-game-iii/
+
+---
+
+## 💡 Approach
+
+Instead of storing each player's score separately, store the **maximum score difference** the current player can achieve over the opponent.
+
+Let:
+
+- `dp[i]` = maximum score difference the current player can obtain starting from index `i`.
+
+At each position, the player has three choices:
+
+- Take 1 stone.
+- Take 2 stones.
+- Take 3 stones.
+
+If the current player takes stones worth `take`, then the opponent will start from the next position with advantage `dp[next]`.
+
+Therefore,
+
+```text
+dp[i] = max(
+    take1 - dp[i+1],
+    take2 - dp[i+2],
+    take3 - dp[i+3]
+)
+```
+
+The answer depends on `dp[0]`:
+
+- `dp[0] > 0` → Alice wins.
+- `dp[0] < 0` → Bob wins.
+- `dp[0] == 0` → Tie.
+
+---
+
+## ✅ Solution
+
+```python
+from typing import List
+
+class Solution:
+    def stoneGameIII(self, stoneValue: List[int]) -> str:
+        n = len(stoneValue)
+        dp = [0] * (n + 1)
+
+        for i in range(n - 1, -1, -1):
+            take = 0
+            dp[i] = float("-inf")
+
+            for j in range(i, min(i + 3, n)):
+                take += stoneValue[j]
+                dp[i] = max(dp[i], take - dp[j + 1])
+
+        if dp[0] > 0:
+            return "Alice"
+        elif dp[0] < 0:
+            return "Bob"
+        return "Tie"
+```
+
+---
+
+## ⏱️ Complexity Analysis
+
+- **Time Complexity:** `O(n)`
+- **Space Complexity:** `O(n)`
+
+---
+
+## 🔑 Key Insight
+
+- Store the **score difference**, not individual scores.
+- At every move, maximize:
+  - **Current collected score − Opponent's best possible advantage**.
+- Negative stone values make greedy strategies fail, so Dynamic Programming is required.
+
+---
+
+## 🏷️ Tags
+
+- Dynamic Programming
+- Game Theory
+- Array
+- Minimax
+- Prefix Decisions
+```
