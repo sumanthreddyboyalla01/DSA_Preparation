@@ -1,0 +1,21 @@
+# 2996. Smallest Missing Integer Greater Than Sequential Prefix Sum
+
+## 📝 Problem Statement
+
+Given a 0-indexed integer array `nums`, a prefix `nums[0..i]` is called **sequential** if every element after the first is exactly `1` greater than the previous element.
+
+Find the **longest sequential prefix**, calculate its sum, and return the smallest integer:
+
+- greater than or equal to that sum, and
+- not present in `nums`.
+
+---
+
+## 💡 Approach
+
+### Step 1: Find the longest sequential prefix
+
+Start with `nums[0]` and keep adding elements while:
+
+```text
+nums[i] == nums[i - 1] + 1
