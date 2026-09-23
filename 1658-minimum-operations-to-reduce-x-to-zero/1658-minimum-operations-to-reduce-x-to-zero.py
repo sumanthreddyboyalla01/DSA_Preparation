@@ -2,26 +2,24 @@ class Solution:
     def minOperations(self, nums: list[int], x: int) -> int:
         target = sum(nums) - x
         
-        # If target is 0, we must pick all elements
         if target == 0:
             return len(nums)
-        # If target < 0, it's impossible to sum to x
         if target < 0:
             return -1
         
-        max_len = -1
+        prefix_map = {0: -1}  # prefix_sum -> index
         current_sum = 0
-        left = 0
+        max_len = -1
         
-        for right in range(len(nums)):
-            current_sum += nums[right]
+        for i, num in enumerate(nums):
+            current_sum += num
             
-            # Shrink window if the sum exceeds target
-            while current_sum > target and left <= right:
-                current_sum -= nums[left]
-                left += 1
+            # Check if there is a prefix sum such that current_sum - prefix_sum = target
+            if (current_sum - target) in prefix_map:
+                max_len = max(max_len, i - prefix_map[current_sum - target])
                 
-            if current_sum == target:
-                max_len = max(max_len, right - left + 1)
+            # Store first occurrence of current_sum to maximize distance
+            if current_sum not in prefix_map:
+                prefix_map[current_sum] = i
                 
         return len(nums) - max_len if max_len != -1 else -1
