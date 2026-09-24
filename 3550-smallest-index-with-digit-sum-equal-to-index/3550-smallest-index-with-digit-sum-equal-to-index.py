@@ -1,13 +1,6 @@
 class Solution:
     def smallestIndex(self, nums: List[int]) -> int:
         for i, val in enumerate(nums):
-            digit_sum = 0
-            temp = val
-            while temp > 0:
-                digit_sum += temp % 10
-                temp //= 10
-            
-            if digit_sum == i:
+            if sum(int(digit) for digit in str(val)) == i:
                 return i
-                
         return -1
