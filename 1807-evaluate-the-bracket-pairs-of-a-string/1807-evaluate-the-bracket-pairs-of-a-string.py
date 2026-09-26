@@ -1,21 +1,12 @@
 class Solution:
     def evaluate(self, s: str, knowledge: list[list[str]]) -> str:
         d = dict(knowledge)
-        res = []
-        key = []
-        in_bracket = False
+        parts = s.split('(')
         
-        for char in s:
-            if char == '(':
-                in_bracket = True
-            elif char == ')':
-                in_bracket = False
-                key_str = "".join(key)
-                res.append(d.get(key_str, "?"))
-                key = []
-            elif in_bracket:
-                key.append(char)
-            else:
-                res.append(char)
-                
+        res = [parts[0]]
+        for part in parts[1:]:
+            key, rest = part.split(')')
+            res.append(d.get(key, "?"))
+            res.append(rest)
+            
         return "".join(res)
