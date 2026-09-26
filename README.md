@@ -19,6 +19,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1480-running-sum-of-1d-array](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/1480-running-sum-of-1d-array) |
 | [1563-stone-game-v](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/1563-stone-game-v) |
 | [1658-minimum-operations-to-reduce-x-to-zero](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/1658-minimum-operations-to-reduce-x-to-zero) |
+| [1807-evaluate-the-bracket-pairs-of-a-string](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/1807-evaluate-the-bracket-pairs-of-a-string) |
 | [1872-stone-game-viii](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/1872-stone-game-viii) |
 | [1920-build-array-from-permutation](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/1920-build-array-from-permutation) |
 | [1929-concatenation-of-array](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/1929-concatenation-of-array) |
@@ -123,6 +124,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1081-smallest-subsequence-of-distinct-characters](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/1081-smallest-subsequence-of-distinct-characters) |
 | [1096-brace-expansion-ii](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/1096-brace-expansion-ii) |
 | [1520-maximum-number-of-non-overlapping-substrings](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/1520-maximum-number-of-non-overlapping-substrings) |
+| [1807-evaluate-the-bracket-pairs-of-a-string](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/1807-evaluate-the-bracket-pairs-of-a-string) |
 | [1927-sum-game](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/1927-sum-game) |
 | [2213-longest-substring-of-one-repeating-character](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/2213-longest-substring-of-one-repeating-character) |
 | [2472-maximum-number-of-non-overlapping-palindrome-substrings](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/2472-maximum-number-of-non-overlapping-palindrome-substrings) |
@@ -244,6 +246,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1477-find-two-non-overlapping-sub-arrays-each-with-target-sum](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/1477-find-two-non-overlapping-sub-arrays-each-with-target-sum) |
 | [1520-maximum-number-of-non-overlapping-substrings](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/1520-maximum-number-of-non-overlapping-substrings) |
 | [1658-minimum-operations-to-reduce-x-to-zero](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/1658-minimum-operations-to-reduce-x-to-zero) |
+| [1807-evaluate-the-bracket-pairs-of-a-string](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/1807-evaluate-the-bracket-pairs-of-a-string) |
 | [2958-length-of-longest-subarray-with-at-most-k-frequency](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/2958-length-of-longest-subarray-with-at-most-k-frequency) |
 | [3016-minimum-number-of-pushes-to-type-word-ii](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/3016-minimum-number-of-pushes-to-type-word-ii) |
 | [3090-maximum-length-substring-with-two-occurrences](https://github.com/sumanthreddyboyalla01/DSA_Preparation/tree/master/3090-maximum-length-substring-with-two-occurrences) |
