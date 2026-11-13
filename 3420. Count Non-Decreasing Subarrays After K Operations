@@ -1,0 +1,91 @@
+LeetCode 3420 — Count Non-Decreasing Subarrays After K Operations
+
+Difficulty: Hard
+Topics: Array, Sliding Window, Monotonic Stack, Monotonic Deque
+Language: Python 3
+
+1. Problem Statement
+
+Given an integer array "nums" and an integer "k", count the number of subarrays that can be transformed into non-decreasing arrays using at most "k" increment operations.
+
+Each operation increments any one element by 1.
+
+A subarray is non-decreasing if:
+
+[
+nums[i] \leq nums[i+1]
+]
+
+for every valid adjacent pair.
+
+2. Approach
+
+The key observation is that elements can only be increased, never decreased.
+
+To make a subarray non-decreasing with minimum operations, each element must be raised to at least the maximum value among all preceding elements in that subarray.
+
+For example:
+
+Original:  [3, 1, 2, 4]
+Modified:  [3, 3, 3, 4]
+Operations: 0 + 2 + 1 + 0 = 3
+
+Techniques Used
+
+- Sliding Window: Maintains a valid range of elements.
+- Monotonic Deque: Maintains the maximum-value groups efficiently.
+- Cost Maintenance: Tracks the minimum increments required to make the current window non-decreasing.
+
+The algorithm processes the array from right to left, shrinking the window whenever its required operation count exceeds "k".
+
+3. Complexity Analysis
+
+Metric| Complexity
+Time| O(n)
+Space| O(n)
+
+Each index is inserted into and removed from the deque at most once.
+
+4. Example
+
+Input:
+
+nums = [6, 3, 1, 2, 4, 4]
+k = 7
+
+Output:
+
+17
+
+There are 21 possible subarrays. Four require more than seven operations.
+
+Therefore:
+
+21 - 4 = 17
+
+5. Test Cases
+
+Input| Expected Output
+"[6,3,1,2,4,4]", k = 7| 17
+"[6,3,1,3,6]", k = 4| 12
+"[1,2,3]", k = 1| 6
+"[5,4,3]", k = 3| 5
+
+6. Key Learnings
+
+1. Understanding prefix maximums for non-decreasing transformations.
+2. Using monotonic data structures to maintain maximum-value groups.
+3. Applying sliding windows to count valid subarrays.
+4. Maintaining operation costs without repeatedly recalculating them.
+
+7. Constraints
+
+- "1 <= nums.length <= 10^5"
+- "1 <= nums[i] <= 10^9"
+- "1 <= k <= 10^9"
+
+8. Conclusion
+
+This problem demonstrates how monotonic data structures and sliding-window techniques can be combined to solve difficult subarray-counting problems efficiently.
+
+Target complexity: O(n) time and O(n) auxiliary space.
