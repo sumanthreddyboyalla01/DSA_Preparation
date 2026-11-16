@@ -1,0 +1,130 @@
+Apply Digit Sum to String
+
+Problem Description
+
+You are given a string "s" consisting of digits and an integer "k".
+
+A round can be completed if the length of "s" is greater than "k".
+
+In each round:
+
+1. Divide "s" into consecutive groups of size "k".
+2. The last group may contain fewer than "k" characters.
+3. Calculate the sum of all digits in each group.
+4. Replace each group with its digit sum (converted into a string).
+5. Merge all groups to form a new string.
+6. Repeat until the length of "s" is less than or equal to "k".
+
+Return the final string.
+
+Examples
+
+Example 1
+
+Input:
+
+s = "11111222223"
+k = 3
+
+Output:
+
+"135"
+
+Explanation:
+
+First round:
+
+- "111" → 3
+- "112" → 4
+- "222" → 6
+- "23" → 5
+
+New string: ""3465""
+
+Second round:
+
+- "346" → 13
+- "5" → 5
+
+Final string: ""135""
+
+Example 2
+
+Input:
+
+s = "00000000"
+k = 3
+
+Output:
+
+"000"
+
+Approach: Simulation
+
+We simulate the process exactly as described in the problem.
+
+Algorithm
+
+1. Use a "while" loop while "len(s) > k".
+2. Initialize an empty result string.
+3. Iterate through the string in steps of "k".
+4. Extract each group using string slicing.
+5. Calculate the sum of digits in that group.
+6. Append the sum to the result.
+7. Update "s" with the result.
+8. Return "s" when its length is at most "k".
+
+Python Solution
+
+class Solution:
+    def digitSum(self, s: str, k: int) -> str:
+        while len(s) > k:
+            result = ""
+
+            for i in range(0, len(s), k):
+                group = s[i:i+k]
+
+                total = sum(int(digit) for digit in group)
+
+                result += str(total)
+
+            s = result
+
+        return s
+
+Dry Run
+
+Input:
+
+s = "11111222223"
+k = 3
+
+Round| Groups| Result
+1| 111, 112, 222, 23| 3465
+2| 346, 5| 135
+
+Final Output: ""135""
+
+Complexity Analysis
+
+Let "n" be the initial length of the string.
+
+- Time Complexity: O(n log n) approximately. Each round processes the current string, whose length decreases by a factor related to "k".
+- Space Complexity: O(n), for storing intermediate strings.
+
+Python Concepts Used
+
+- "while" loops
+- "for" loops
+- String slicing: "s[i:i+k]"
+- "range(0, len(s), k)"
+- "sum()" function
+- Type conversion using "int()" and "str()"
+
+Key Takeaway
+
+The problem is a straightforward simulation problem. Instead of trying to calculate the final answer directly, repeatedly perform the given grouping and digit-sum operations until the stopping condition is satisfied.
+
+Topic: String Manipulation | Simulation
+
+Language: Python 3
