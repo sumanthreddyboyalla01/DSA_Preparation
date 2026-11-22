@@ -1,0 +1,13 @@
+# Check If All A's Appear Before All B's
+
+## Problem
+Given a string `s` containing only `'a'` and `'b'`, return `True` if all `'a'` characters appear before all `'b'` characters. Otherwise, return `False`.
+
+## Approach
+A valid string must never contain the substring `"ba"`. If a `'b'` appears before an `'a'`, the order is violated.
+
+## Python Solution
+```python
+class Solution:
+    def checkString(self, s: str) -> bool:
+        return "ba" not in s
