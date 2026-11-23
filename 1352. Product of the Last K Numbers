@@ -1,0 +1,82 @@
+Product of the Last K Numbers
+
+Problem Statement
+
+Design a data structure that accepts a stream of integers and returns the product of the last "k" numbers in the stream.
+
+Approach: Prefix Products
+
+Instead of calculating the product of the last "k" numbers every time, maintain cumulative prefix products.
+
+For a stream:
+"[3, 2, 5, 4]"
+
+Prefix products:
+"[1, 3, 6, 30, 120]"
+
+The product of the last "k" numbers can be calculated in O(1) using division:
+
+"product(last k) = prefix[-1] // prefix[-k-1]"
+
+Handling Zero
+
+Zero makes prefix division invalid.
+
+Whenever "0" is added, reset the prefix array to "[1]". This ensures all stored prefix products are calculated only after the most recent zero.
+
+If "k" is greater than or equal to the length of the prefix array, the requested range contains a zero, so return "0".
+
+Implementation (Python)
+
+class ProductOfNumbers:
+
+    def __init__(self):
+        self.prefix = [1]
+
+    def add(self, num: int) -> None:
+        if num == 0:
+            self.prefix = [1]
+        else:
+            self.prefix.append(self.prefix[-1] * num)
+
+    def getProduct(self, k: int) -> int:
+        if k >= len(self.prefix):
+            return 0
+
+        return self.prefix[-1] // self.prefix[-k-1]
+
+Example
+
+Input:
+
+add(3)
+add(0)
+add(2)
+add(5)
+add(4)
+getProduct(2)
+getProduct(3)
+getProduct(4)
+
+Output:
+
+20
+40
+0
+
+Complexity Analysis
+
+Operation| Time Complexity
+add(num)| O(1)
+getProduct(k)| O(1)
+
+Space| Complexity
+Prefix products| O(n)
+
+Key Insight
+
+Prefix products allow range products to be calculated using division rather than iterating over the elements. Resetting the prefix array whenever zero is encountered prevents division-by-zero issues and keeps both operations efficient.
+
+Language
+
+Python 3
