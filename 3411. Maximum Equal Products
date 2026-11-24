@@ -1,0 +1,97 @@
+Longest Product Equivalent Subarray
+
+Problem Statement
+
+Given an array of positive integers "nums", find the length of the longest contiguous subarray satisfying:
+
+"Product(subarray) == GCD(subarray) * LCM(subarray)"
+
+Approach: Brute Force
+
+Generate every possible contiguous subarray while maintaining its:
+
+- Product
+- GCD
+- LCM
+
+For each subarray, check whether:
+
+"product == gcd * lcm"
+
+If the condition is satisfied, update the maximum length.
+
+Python Solution
+
+from math import gcd, lcm
+from typing import List
+
+class Solution:
+    def maxLength(self, nums: List[int]) -> int:
+        n = len(nums)
+        ans = 1
+
+        for i in range(n):
+            prod = 1
+            g = 0
+            L = 1
+
+            for j in range(i, n):
+                prod *= nums[j]
+                g = gcd(g, nums[j])
+                L = lcm(L, nums[j])
+
+                if prod == g * L:
+                    ans = max(ans, j - i + 1)
+
+        return ans
+
+Example 1
+
+Input:
+
+nums = [1, 2, 1, 2, 1, 1, 1]
+
+Output:
+
+5
+
+Explanation:
+
+The longest valid subarray is "[1, 2, 1, 1, 1]".
+
+- Product = 2
+- GCD = 1
+- LCM = 2
+
+Since "2 == 1 * 2", the subarray is product equivalent.
+
+Example 2
+
+Input:
+
+nums = [2, 3, 4, 5, 6]
+
+Output:
+
+3
+
+The subarray "[3, 4, 5]" satisfies the condition.
+
+Complexity Analysis
+
+- Time Complexity: O(n² × log M), where M is the maximum element. This accounts for the GCD/LCM calculations, excluding the cost of arbitrary-precision integer multiplication.
+- Space Complexity: O(1) auxiliary space, excluding integer storage.
+
+Key Concepts Used
+
+1. Brute Force
+2. Subarray Traversal
+3. GCD (Greatest Common Divisor)
+4. LCM (Least Common Multiple)
+5. Incremental Calculation
+
+Conclusion
+
+The solution checks all possible contiguous subarrays and efficiently maintains the product, GCD, and LCM instead of recalculating them from scratch.
+
+Since the array length is at most 100, this approach is suitable for the given constraints.
