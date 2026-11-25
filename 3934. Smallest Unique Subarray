@@ -1,0 +1,198 @@
+LeetCode 3934 — Smallest Unique Subarray
+
+Problem Statement
+
+Given an integer array "nums", find the minimum length of a subarray that is not identical to any other subarray in the array.
+
+Two subarrays are considered identical if they have the same length and contain the same elements in the same order.
+
+Return the minimum possible length of a unique subarray.
+
+Approach: Suffix Array + LCP
+
+A brute-force solution generates every possible subarray and counts its occurrences. However, this approach is too slow for the constraint of "n <= 10^5".
+
+To optimize the solution, we use:
+
+1. Coordinate Compression
+2. Suffix Array Construction
+3. Kasai's Algorithm (LCP Array)
+4. Minimum Unique Prefix Calculation
+
+Algorithm
+
+1. Coordinate Compression
+
+Convert the input values into smaller integer ranks while preserving their relative ordering.
+
+This allows efficient suffix array construction.
+
+2. Build the Suffix Array
+
+Construct a suffix array using the doubling technique and counting sort.
+
+The suffix array stores the starting indices of all suffixes in lexicographical order.
+
+3. Construct the LCP Array
+
+Use Kasai's algorithm to calculate the Longest Common Prefix between adjacent suffixes.
+
+The LCP value tells us how many initial elements two neighboring suffixes share.
+
+4. Find the Minimum Unique Subarray
+
+For each suffix in the suffix array:
+
+- Find its LCP with the previous suffix.
+- Find its LCP with the next suffix.
+- Calculate the minimum unique prefix length.
+
+Formula:
+
+"required_length = max(previous_LCP, next_LCP) + 1"
+
+Ignore suffixes that do not have enough remaining elements to form the required prefix.
+
+Return the minimum valid length.
+
+Python Solution
+
+from typing import List
+
+class Solution:
+    def smallestUniqueSubarray(self, nums: List[int]) -> int:
+        n = len(nums)
+
+        vals = {v: i + 1 for i, v in enumerate(sorted(set(nums)))}
+        s = [vals[x] for x in nums] + [0]
+        N = n + 1
+
+        p = list(range(N))
+        p.sort(key=lambda i: s[i])
+
+        c = [0] * N
+        for i in range(1, N):
+            c[p[i]] = c[p[i - 1]] + (s[p[i]] != s[p[i - 1]])
+
+        k = 0
+        while (1 << k) < N:
+            shift = 1 << k
+            p = [(x - shift) % N for x in p]
+
+            count = [0] * N
+            for x in c:
+                count[x] += 1
+
+            pos = [0] * N
+            for i in range(1, N):
+                pos[i] = pos[i - 1] + count[i - 1]
+
+            pn = [0] * N
+            for x in p:
+                cl = c[x]
+                pn[pos[cl]] = x
+                pos[cl] += 1
+
+            p = pn
+            cn = [0] * N
+            cn[p[0]] = 0
+
+            for i in range(1, N):
+                cur = (c[p[i]], c[(p[i] + shift) % N])
+                prev = (c[p[i - 1]], c[(p[i - 1] + shift) % N])
+                cn[p[i]] = cn[p[i - 1]] + (cur != prev)
+
+            c = cn
+            k += 1
+
+        sa = [x for x in p if x != n]
+
+        rank = [0] * n
+        for i, x in enumerate(sa):
+            rank[x] = i
+
+        lcp = [0] * n
+        h = 0
+
+        for i in range(n):
+            r = rank[i]
+
+            if r == 0:
+                continue
+
+            j = sa[r - 1]
+
+            while i + h < n and j + h < n and nums[i + h] == nums[j + h]:
+                h += 1
+
+            lcp[r] = h
+
+            if h:
+                h -= 1
+
+        ans = n
+
+        for r in range(n):
+            start = sa[r]
+            required = max(
+                lcp[r],
+                lcp[r + 1] if r + 1 < n else 0
+            ) + 1
+
+            if required <= n - start:
+                ans = min(ans, required)
+
+        return ans
+
+Examples
+
+Example 1
+
+Input:
+"nums = [3, 3, 3]"
+
+Output:
+"3"
+
+Explanation: Only the complete subarray "[3, 3, 3]" is unique.
+
+Example 2
+
+Input:
+"nums = [2, 1, 2, 3, 3]"
+
+Output:
+"1"
+
+Explanation: "[1]" occurs exactly once.
+
+Example 3
+
+Input:
+"nums = [1, 1, 2, 2, 1]"
+
+Output:
+"2"
+
+Explanation: At least one subarray of length 2 occurs exactly once.
+
+Complexity Analysis
+
+Component| Complexity
+Coordinate Compression| O(n log n)
+Suffix Array| O(n log n)
+LCP Construction| O(n)
+Answer Calculation| O(n)
+Total Time| O(n log n)
+Auxiliary Space| O(n)
+
+Constraints
+
+- "1 <= nums.length <= 10^5"
+- "1 <= nums[i] <= 10^5"
+
+Key Takeaway
+
+Suffix arrays allow efficient comparison of all suffixes without explicitly generating every possible subarray.
+
+By combining suffix arrays with LCP information, we can determine the minimum unique subarray length in O(n log n) time and O(n) auxiliary space.
