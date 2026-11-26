@@ -1,0 +1,64 @@
+Remove Stones Game – Alice Wins
+
+Problem Statement
+
+Alice and Bob take turns removing stones from a pile.
+
+- Alice goes first and removes exactly 10 stones.
+- Each subsequent player removes 1 fewer stone than the previous player.
+- A player who cannot remove the required number of stones loses.
+
+Determine whether Alice wins.
+
+Approach: Simulation
+
+1. Initialize "stones = 10".
+2. Track whose turn it is using a boolean variable.
+3. While the pile contains enough stones:
+   - Remove the required number of stones.
+   - Switch turns.
+   - Decrease the required removal by 1.
+4. Return whether Alice wins.
+
+Python Solution
+
+class Solution:
+    def canAliceWin(self, n: int) -> bool:
+        stones = 10
+        alice = True
+
+        while n >= stones:
+            n -= stones
+            alice = not alice
+            stones -= 1
+
+        return not alice
+
+Example 1
+
+Input: "n = 12"
+
+- Alice removes 10 stones.
+- Remaining stones = 2.
+- Bob cannot remove 9 stones.
+- Alice wins.
+
+Output: "True"
+
+Example 2
+
+Input: "n = 1"
+
+- Alice cannot remove 10 stones.
+- Alice loses.
+
+Output: "False"
+
+Complexity Analysis
+
+- Time Complexity: O(10), effectively O(1), since there are at most 10 possible moves.
+- Space Complexity: O(1), since only a few variables are used.
+
+Conclusion
+
+The solution uses a simple turn-by-turn simulation to determine the winner efficiently.
